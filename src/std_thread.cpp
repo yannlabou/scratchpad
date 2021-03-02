@@ -3,8 +3,8 @@
 
 int main()
 {
-  unsigned int cpu_count =
+  unsigned int thread_count =
     std::thread::hardware_concurrency();// https://en.cppreference.com/w/cpp/thread/thread/hardware_concurrency
-  std::printf("%d\n", cpu_count);
+  std::printf("%d\n", thread_count);
   return 0;
 }
