@@ -1,5 +1,5 @@
-add_executable(bigfive big_five.cpp)
-target_link_libraries(bigfive PRIVATE project_options project_warnings)
+add_executable(five five.cpp)
+target_link_libraries(five PRIVATE project_options project_warnings)
 
 add_executable(stdthread std_thread.cpp)
 target_link_libraries(stdthread PRIVATE project_options project_warnings)
