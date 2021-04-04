@@ -1,6 +1,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <unistd.h> // fork
+#include <sys/wait.h>
 
 int main() {
     std::printf("Process id: %d\n", getpid());
@@ -13,6 +14,7 @@ int main() {
     if (!rc) { // Child process creation succeeded
         std::printf("Child process id: %d\n", getpid());
     } else { // Parent process path
-        std::printf("Parent process id: %d\n", getpid());
+        int rc_wait = wait(nullptr); // waiting the child process to complete
+        std::printf("Parent process %d of child process %d\n", getpid(), rc_wait);
     }
 }
