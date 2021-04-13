@@ -11,7 +11,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    if (!rc) { // Child process creation succeeded
+    if (rc == 0) { // Child process creation succeeded
         std::printf("Child process id: %d\n", getpid());
     } else { // Parent process path
         int rc_wait = wait(nullptr); // waiting the child process to complete
