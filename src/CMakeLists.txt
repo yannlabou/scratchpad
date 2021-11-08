@@ -12,3 +12,6 @@ target_link_libraries(fork PRIVATE project_options project_warnings)
 
 add_executable(rusage rusage.cpp)
 target_link_libraries(rusage PRIVATE project_options project_warnings)
+
+add_executable(stdfind_is_broken remove_first_odd_number.cpp)
+target_link_libraries(stdfind_is_broken PRIVATE project_options project_warnings)
