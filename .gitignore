@@ -1,6 +1,4 @@
 .DS_Store
-*.user
 .vscode/
-.idea/
+bin/
 build/
-*build*/*

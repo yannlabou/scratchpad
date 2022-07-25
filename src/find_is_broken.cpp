@@ -15,6 +15,7 @@ int main()
     std::end(v),
     // Passing odd_count by value will display 0 2 4 5 - where is 3?
     // Passing odd_count by reference is fine
+
     [odd_count](int x) mutable { return (x & 1) && (++odd_count == 1); });
   v.erase(p, std::end(v));
 
